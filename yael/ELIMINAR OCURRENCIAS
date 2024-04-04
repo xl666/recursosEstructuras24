@@ -1,0 +1,10 @@
+def eliminar_ocurrencias(valor, lista):
+    return [x for x in lista if x != valor]
+
+if __name__ == "__main__":
+    v = int(input())
+    n = int(input())
+    lista = [int(input()) for i in range(n)]
+
+    resultado = eliminar_ocurrencias(v, lista)
+    print(resultado)

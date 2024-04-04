@@ -1,0 +1,15 @@
+def matricula(cadena):
+    indice_inicio = cadena.find("(")
+    indice_fin = cadena.find(")")
+    contenido_parentesis = cadena[indice_inicio + 1:indice_fin]
+    return contenido_parentesis
+
+if __name__ == "__main__":
+    num_cadenas = int(input())
+    datos = []
+    for _ in range(num_cadenas):
+        cadena = input()
+        datos.append(matricula(cadena))
+    
+    for matricula in datos:
+        print(matricula)

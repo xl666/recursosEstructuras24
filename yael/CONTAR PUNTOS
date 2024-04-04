@@ -1,0 +1,23 @@
+def contar(cadena):
+    Np = 0
+    punto_encontrado = False
+
+    if cadena.startswith("."):
+        Np += 1 
+        punto_encontrado = True
+
+    for caracter in cadena[1:-1]:  # Examinar caracteres excepto el primero y el último
+        if caracter == "." and not punto_encontrado:
+            Np += 1
+            punto_encontrado = True
+        elif caracter != ".":
+            punto_encontrado = False
+
+    if cadena.endswith(".") and not punto_encontrado:
+        Np += 1
+
+    return Np
+
+if __name__ == '__main__':
+    punto = input()
+    print(contar(punto))

@@ -1,0 +1,9 @@
+def verdad_falso (a, b):
+    xor = 0
+    xor = not (a == b)
+    return xor
+
+num = int(input())
+num1 = int(input())
+
+print (verdad_falso(num, num1))

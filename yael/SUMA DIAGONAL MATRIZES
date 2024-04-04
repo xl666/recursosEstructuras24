@@ -1,0 +1,25 @@
+def suma_diagonal(matriz):
+    suma = 0
+    for i in range(len(matriz)):
+        suma += matriz[i][i]
+    return suma
+
+
+F = int(input())
+C = int(input())
+
+# Verificar si es una matriz cuadrada
+if __name__ == "__main__":
+    matriz = []
+    # Entrada de elementos de la matriz
+    for _ in range(F):
+        fila = []
+        for _ in range(C):
+            fila.append(int(input()))
+        matriz.append(fila)
+
+    # Calcular la suma de la diagonal
+    suma_diagonal = suma_diagonal(matriz)
+
+    # Mostrar la suma de la diagonal
+    print( suma_diagonal)

@@ -1,0 +1,12 @@
+n_elmentos = int(input ())
+lista = []
+
+if n_elmentos == 0:
+    print('sin datos')
+    exit #Termina el programa
+
+for _ in range(n_elmentos):
+    lista.append(input())
+
+for elemento in lista:
+    print(elemento)

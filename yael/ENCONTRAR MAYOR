@@ -1,0 +1,19 @@
+def encontrar_mayor(lista):
+    mayor = lista[0]  # Suponemos que el primer elemento es el mayor
+    for elemento in lista:
+        if elemento > mayor:
+            mayor = elemento
+    return mayor
+
+# Función para ingresar una lista de enteros desde el teclado
+def ingresar_lista():
+    n = int(input())
+    lista = []
+    for i in range(n):
+        valor = int(input())
+        lista.append(valor)
+    return lista
+
+lista_enteros = ingresar_lista()
+mayor_elemento = encontrar_mayor(lista_enteros)
+print(mayor_elemento)

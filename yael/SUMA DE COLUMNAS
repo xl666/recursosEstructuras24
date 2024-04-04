@@ -1,0 +1,30 @@
+def sumatoria_columnas(matriz, filas, columnas):
+    sumas_columnas = [0] * columnas  # Inicializar una lista para almacenar la suma de cada columna
+    
+    # Recorrer cada fila y sumar los valores a las columnas correspondientes
+    for fila in matriz:
+        for j in range(columnas):
+            sumas_columnas[j] += fila[j]
+    
+    return sumas_columnas
+
+if __name__ == "__main__":
+    F = int(input())
+    C = int(input())
+
+    # Inicializar la matriz
+    matriz = []
+
+    # Entrada de elementos de la matriz
+    for i in range(F):
+        fila = []
+        for j in range(C):
+            fila.append(int(input()))
+        matriz.append(fila)
+
+    # Calcular la sumatoria de cada columna
+    sumas_columnas = sumatoria_columnas(matriz, F, C)
+
+    # Mostrar la sumatoria de cada columna separada por comas
+    resultado = ','.join(map(str, sumas_columnas))
+    print(resultado)

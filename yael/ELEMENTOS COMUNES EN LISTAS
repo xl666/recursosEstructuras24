@@ -1,0 +1,22 @@
+def elementos_comunes(lista1, lista2):
+    # Convierte las listas en conjuntos para eliminar duplicados
+    conjunto1 = set(lista1)
+    conjunto2 = set(lista2)
+    
+    # Encuentra la intersección de los conjuntos
+    elementos_en_comun = conjunto1 & conjunto2
+    
+    # Ordena los elementos en común de forma ascendente
+    lista_resultante = sorted(elementos_en_comun)
+    
+    return lista_resultante
+
+if __name__ == "__main__":
+    N = int(input()) 
+    M = int(input())
+    lista1 = [int(input()) for i in range(N)]   
+    lista2 = [int(input()) for i in range(M)]
+
+    # Obtener la lista resultante
+    resultado = elementos_comunes(lista1, lista2)
+    print(resultado)

@@ -1,0 +1,18 @@
+def crear_lista():
+    n = int(input())
+    lista = []
+    for _ in range(n):
+        num = int(input())
+        lista.append(num)
+    return lista
+
+def producto_lista(lista):
+    producto = 1
+    for num in lista:
+        producto *= num
+    return producto
+
+lista_numeros = crear_lista()
+if lista_numeros:
+    resultado = producto_lista(lista_numeros)
+    print(resultado)

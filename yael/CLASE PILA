@@ -1,0 +1,34 @@
+class Pila():
+    def __init__(self):
+        self.interna = []
+
+    def esta_vacia(self):
+        return not self.interna
+
+    def push(self, valor):
+        self.interna.append(valor)
+
+    def pop(self):
+        if not self.interna:
+            return None
+        return self.interna.pop()
+
+    def peek(self):
+        if not self.interna:
+            return None
+        return self.interna[-1]
+
+    def __repr__(self):
+        return str(self.interna)
+
+if __name__ == '__main__':
+    N = int(input())
+    pil = Pila()
+    for _ in range(N):
+        num = int(input())
+        pil.push(num)
+    resultado = ','.join(map(str, pil.interna))
+    res = resultado[::-1]
+    print(res)
+
+    

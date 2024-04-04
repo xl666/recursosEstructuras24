@@ -1,0 +1,36 @@
+class Pila():
+    def __init__(self):
+        self.interna = []
+
+    def esta_vacia(self):
+        return not self.interna
+
+    def push(self, valor):
+        self.interna.append(valor)
+
+    def pop(self):
+        if not self.interna:
+            return None
+        return self.interna.pop()
+
+    def peek(self):
+        if not self.interna:
+            return None
+        return self.interna[-1]
+
+    def __repr__(self):
+        return str(self.interna)
+
+def expresion_balanceada(expresion):
+    pila = Pila()
+    for caracter in expresion:
+        if caracter == '(':
+            pila.push(caracter)
+        elif caracter == ')':
+            if pila.esta_vacia() or pila.pop() != '(':
+                return False
+    return pila.esta_vacia()
+
+if __name__ == '__main__':
+    expresion1 = input()
+    print(expresion_balanceada(expresion1))

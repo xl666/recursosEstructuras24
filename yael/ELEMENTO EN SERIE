@@ -1,0 +1,19 @@
+def elemento_serie(n):
+    if n == 1 or n == 2:
+        return 1
+    
+    elemento_actual = 0
+    elemento_previo = 1
+    elemento_previo_previo = 1
+    
+    for _ in range(3, n + 1):
+        elemento_actual = elemento_previo + elemento_previo_previo
+        elemento_previo_previo = elemento_previo
+        elemento_previo = elemento_actual
+    
+    return elemento_actual
+
+#
+N = int(input())
+resultado = elemento_serie(N)
+print(resultado)

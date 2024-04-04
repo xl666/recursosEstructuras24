@@ -1,0 +1,16 @@
+class RutaUnix:
+    def __init__(self, ruta):
+        partes = ruta.split("/")
+        self.directorio = "/".join(partes[:-1]) + "/" if partes[:-1] else "./"
+        self.archivo = partes[-1]
+        self.extension = self.archivo.split(".")[-1]
+
+    def __repr__(self):
+        return f"directorio:{self.directorio}:archivo:{self.archivo}:extension:{self.extension}"
+
+if __name__ == "__main__":
+    ruta = input()
+    # Crear objeto RutaUnix a partir de la entrada
+    objeto_ruta = RutaUnix(ruta)
+    # Imprimir el objeto RutaUnix
+    print(objeto_ruta)

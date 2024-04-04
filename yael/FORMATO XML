@@ -1,0 +1,8 @@
+def formato(cadena):
+    nombre, edad, grado = cadena.split(".")
+    xml = f"<nombre>{nombre}</nombre><edad>{edad}</edad><grado>{grado}</grado>"
+    return xml
+
+if __name__ == "__main__":
+    datos = input()
+    print(formato(datos))
