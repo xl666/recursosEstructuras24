@@ -1,0 +1,2 @@
+saludar = input('')
+print(saludar)

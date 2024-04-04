@@ -1,0 +1,6 @@
+
+short 2 byes
+int 4 bytes
+long 8 bytes
+en python  no existe short long etc.. todos son int.
+Si no se pide en especifico el resultado regresara como flotante , ejemplo : 3+3.0 = 6.0

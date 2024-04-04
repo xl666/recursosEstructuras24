@@ -1,0 +1,35 @@
+class Listas:
+    def __init__(self, lista):
+        self.lista = lista
+    
+    def definir(self, longitud_lista_1, longitud_lista_2):
+        self.lista_1 = []
+        self.lista_2 = []
+
+        print("Ingrese los elementos para la lista 1:")
+        for i in range(longitud_lista_1):
+            elemento = input(f"Ingrese el elemento {i + 1} de la lista 1: ")
+            self.lista_1.append(elemento)
+
+        print("Ingrese los elementos para la lista 2:")
+        for i in range(longitud_lista_2):
+            elemento = input(f"Ingrese el elemento {i + 1} de la lista 2: ")
+            self.lista_2.append(elemento)
+
+        self.lista = [self.lista_1, self.lista_2]
+        return self.lista
+    
+    def compara(self):
+        aux = []
+        for elemento_lista_1, elemento_lista_2 in zip(self.lista[0], self.lista[1]):
+            if elemento_lista_1 == elemento_lista_2:
+                aux.append(elemento_lista_1)
+        return aux
+
+if __name__ == "__main__":
+    lista = Listas([])
+    longitud_lista_1 = int(input("Ingrese la longitud de la lista 1: "))
+    longitud_lista_2 = int(input("Ingrese la longitud de la lista 2: "))
+    lista.definir(longitud_lista_1, longitud_lista_2)
+    print(lista.compara())
+ 

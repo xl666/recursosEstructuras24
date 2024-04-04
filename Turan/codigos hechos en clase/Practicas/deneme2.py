@@ -1,0 +1,7 @@
+n = int(input())
+m = int(input())
+l1 =set([int(input()) for num in range(n)])
+l2 =set([int(input()) for num in range(m)])
+print( l1,l2)
+setdelistas= l1.intersection(l2)
+print(list(setdelistas))
