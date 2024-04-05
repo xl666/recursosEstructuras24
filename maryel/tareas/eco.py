@@ -1,0 +1,2 @@
+palabra = input()
+print(palabra)
