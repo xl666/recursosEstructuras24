@@ -172,4 +172,3 @@ if __name__ == '__main__':
     indiceB = int(input())
     n = int(input())
     arbol = leer_arbol(n)
-    print(es_ancestro(arbol, indiceA, indiceB))
